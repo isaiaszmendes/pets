@@ -8,17 +8,19 @@ form.addEventListener('submit', validar);
 function validar(){
 	a = 'user123';
 	b = 'user@email.com';
-	message = '';
+	mensagem = '';
 
 	if ((login.value == a || login.value == b) && (pass.value == '123456')) 
 	{
 		this.action = "prontuario.html";
 	}
 	if(login.value == ''){
-		message += 'Preencha o campo Username';
+		mensagem += 'Preencha o campo Username\n';
 	}
 	if(pass.value == ''){
-		message += 'Preencha a senha';
+		mensagem += 'Preencha a senha\n';
 	}
-	
+	if (mensagem.length != '') {
+		alert(mensagem);
+	}
 }

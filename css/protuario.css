@@ -14,6 +14,8 @@ body{
 
 	display: flex;
 	justify-content: center;
+	animation-name: deslizarX;
+    animation-duration: 2s;
 }
 
 .topo .blocos{
@@ -51,36 +53,134 @@ div .pet{
 .blocoB{
 	display: flex;
 	justify-content: flex-end;
+	animation-name: deslizarY;
+    animation-duration: 2s;
+    font-family: cursive;
 }
 
 .servicos{
 	width: 450px;
-	height: 315px;
     background: linear-gradient(to top, rgba(33,150,243,0.2),rgba(33,150,243,0.6));
 	text-align: center;
 	border-radius: 20px 20px 0px 0px;
 	margin-right: 99px;
 }
-.teste{
+.linhas{
 	display: flex;
 	flex-wrap: nowrap;
 }
 
+.servicos h1{
+	color: #fff;
+	font-family: cursive;
+}
+
 .check-image{
 	width: 60px;
-	height: 60px;
+	height: 65px;
 	border: 1px solid black;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	/*background-color: #fff;*/
+	outline : none;
 }
 
 .tipo-servico{
 	border: 1px solid black;
 	width: 100%;
 }
+
 .pata{
 	width: 35px;
 	height: 35px;
+	outline: none;
+}
+
+.blocoC{
+	display: flex;
+	animation-name: deslizarY;
+    animation-duration: 2s;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.blocoC .prontuario{
+	display: flex;
+	flex-direction: column;
+	width: 90%;
+	text-align: center;
+	align-items: center;
+}
+
+.blocoC .prontuario input{
+	width: 90%;
+	height: 30px;
+	margin-top: 20px;
+	background-color: #f2f2f2;
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 2px solid #cacaca;
+	outline: none;
+	font-size: 20px;
+}
+.blocoC .prontuario input:focus{
+	border-bottom: 2px solid #2196F3;
+}
+
+.blocoC .prontuario div{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 50px;
+}
+
+.blocoC .prontuario button{
+	margin-top: 10px;
+	width: 350px;
+	padding: 5px;
+	font-size: 22px;
+	font-family: cursive;
+	margin: 0px 20px;
+	
+	margin-bottom: 15vh;
+	outline: none;
+}
+.btn-blue{
+	background-color: #f2f2f2;
+	color: #2196f6;
+}
+
+.btn-red{
+	background-color: #f2f2f2;
+	color: #F62121;
+}
+
+.btn-blue:hover{
+	background-color: #2196f6;
+	color: #f2f2f2;
+}
+
+.btn-red:hover{
+	background-color: #F62121;
+	color: #f2f2f2;
+}
+
+@keyframes deslizarX {
+    0% {
+    	transform: translateX(200px);
+    }
+    100%
+    {
+    	transform: translateX(0px);
+    }
+}
+
+@keyframes deslizarY {
+    0% {
+    	transform: translateY(200px);
+    }
+    100%
+    {
+    	transform: translateY(0px);
+    }
 }
