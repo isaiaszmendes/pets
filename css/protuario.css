@@ -1,3 +1,86 @@
 body{
 	margin: 0;
+	display: flex;
+	justify-content: center;
+	background-color: #f2f2f2;
+}
+
+.conteudo{
+	width: 1000px;
+	height: 800px;
+}
+
+.topo{
+
+	display: flex;
+	justify-content: center;
+}
+
+.topo .blocos{
+	margin: 10px 80px;
+}
+
+.blocos .foto{
+	border: 1px solid blue;
+	border-radius: 50%;
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	margin-top: 20px;
+
+}
+.info{
+	text-align: center;
+	font-family: sans-serif;
+}
+p{
+	font-size: 18px;
+}
+
+div .dono{
+	width: 200px;
+	height: 350px;
+}
+
+div .pet{
+	padding: 40px 10px;
+	width: 200px;
+	height: 170px;
+	background-color: #fff;
+}
+.blocoB{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.servicos{
+	width: 450px;
+	height: 315px;
+    background: linear-gradient(to top, rgba(33,150,243,0.2),rgba(33,150,243,0.6));
+	text-align: center;
+	border-radius: 20px 20px 0px 0px;
+	margin-right: 99px;
+}
+.teste{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.check-image{
+	width: 60px;
+	height: 60px;
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	/*background-color: #fff;*/
+}
+
+.tipo-servico{
+	border: 1px solid black;
+	width: 100%;
+}
+.pata{
+	width: 35px;
+	height: 35px;
 }
