@@ -14,5 +14,4 @@ function clicar(){
 for (let div of check){
 	div.addEventListener('click', clicar);
 }
-console.log(contador)
 

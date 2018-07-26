@@ -1,18 +1,24 @@
 let login = document.getElementById('user');
 let pass = document.getElementById('pass');
-let botao = document.querySelector('button');
+let form = document.querySelector('form');
 
 
-botao.addEventListener('click', validar);
+form.addEventListener('submit', validar);
 
 function validar(){
 	a = 'user123';
 	b = 'user@email.com';
+	message = '';
+
 	if ((login.value == a || login.value == b) && (pass.value == '123456')) 
 	{
-		window.location.href = "prontuario.html";
-	}else{
-		alert('login incorreto')
+		this.action = "prontuario.html";
+	}
+	if(login.value == ''){
+		message += 'Preencha o campo Username';
+	}
+	if(pass.value == ''){
+		message += 'Preencha a senha';
 	}
 	
 }
