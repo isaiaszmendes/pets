@@ -12,7 +12,7 @@ function validar(){
 
 	if ((login.value == a || login.value == b) && (pass.value == '123456')) 
 	{
-		this.action = "prontuario.html";
+		this.action = "prontuario";
 	}
 	if(login.value == ''){
 		mensagem += 'Preencha o campo Username\n';
