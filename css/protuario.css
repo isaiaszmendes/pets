@@ -7,7 +7,7 @@ body{
 }
 h1 {
 	font-size: 55px;
-	font-family: 'Pacifico';
+	font-family: 'Pacifico', 'sans-serif';
 }
 
 .cor-tema{
@@ -217,7 +217,7 @@ div .pet{
 }
 
 .blocoC{
-	display: flex;
+	display: none;
     margin-top: 50px;
     justify-content: center;
 }
@@ -349,3 +349,52 @@ div .pet{
     	transform: translateX(200px);
     }
 }
+
+@media screen and (max-width: 500px) {
+	header li{
+		margin: -5px 25px;
+	}
+
+	.conteudo {
+	    margin-top: 0px;
+	    width: 400px;
+	    height: 700px;
+	}
+
+	h1 {
+	    font-size: 35px;
+	}
+	.welcome {
+	    margin: 110px 4px 0px;
+	}
+
+	.welcome p {
+	    font-size: 18px;
+	}
+	.info{
+		width: 270px;
+	}
+	.blocos .foto{	
+		margin-top: 30px;	
+	}
+	.servicos {
+	    width: 500px;
+	}
+
+	.servicos h1{
+	   font-size: 22px;
+	}
+	.blocoC .prontuario button {
+    	margin: 0px 50px;
+    }
+    .blocoC .prontuario input {
+	    width: 500px;
+	}
+	.blocoC .prontuario {
+	    display: flex;
+	    flex-direction: column;
+	    width: 40px;
+	    text-align: center;
+	    align-items: center;
+	}
+}	

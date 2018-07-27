@@ -137,4 +137,8 @@ section .form button:hover{
 	section .form button {
     	height: 35px;
 	}
+
+	.plano{
+		width: 400px;
+	}
 }

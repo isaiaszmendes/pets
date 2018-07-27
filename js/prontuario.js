@@ -1,9 +1,9 @@
 let welcome = document.querySelector('.welcome');
 let check = document.querySelectorAll('.check-image');
+let plano = document.querySelectorAll('.plano input');
 let bloco = document.querySelectorAll('.blocos');
 let blocoA = document.querySelector('.blocoA');
 let blocoB = document.querySelector('.blocoB');
-// let servicos = document.querySelector('.servicos');
 let blocoC = document.querySelector('.blocoC');
 let link = document.querySelectorAll('li img');
 
@@ -36,6 +36,13 @@ function removerBlocoB(){
 	}, 1000);
 };
 
+function removerBlocoC(){
+	blocoC.classList.add('deslizarSumirD');
+	setTimeout(function(){
+		blocoC.style.display =  'none';
+	}, 1000);
+};
+
 link[0].addEventListener('click', show_Welcome);
 link[1].addEventListener('click', show_Dono);
 link[2].addEventListener('click', show_Pet);
@@ -45,6 +52,7 @@ function show_Welcome(){
 	removerBlocoDono();
 	removerBlocoPet();
 	removerBlocoB();
+	removerBlocoC();
 
 	welcome.classList.remove('deslizarSumirE');
 	setTimeout(function(){
@@ -57,6 +65,7 @@ function show_Dono(){
 	removerWelcome();
 	removerBlocoPet();
 	removerBlocoB();
+	removerBlocoC();
 		bloco[0].classList.remove('animarD')
 		bloco[0].classList.remove('animarE')
 		bloco[0].classList.remove('deslizarSumirE')
@@ -70,6 +79,7 @@ function show_Pet(){
 	removerWelcome();
 	removerBlocoDono();
 	removerBlocoB();
+	removerBlocoC();
 		bloco[1].classList.remove('animarD')
 		bloco[1].classList.remove('animarE')
 		bloco[1].classList.remove('deslizarSumirD')
@@ -83,39 +93,14 @@ function show_Prontuario(){
 	removerWelcome();
 	removerBlocoDono();
 	removerBlocoPet();
-	blocoB.classList.remove('deslizarSumirD')
+	blocoB.classList.remove('deslizarSumirD');
+	blocoC.classList.remove('deslizarSumirD')
 	setTimeout(function(){
 			blocoB.style.display = 'flex';
 			blocoB.classList.add('animarY');
+			blocoC.style.display = 'flex';
+			blocoC.classList.add('animarY');
 		},2000);
-}
-
-function mostrarBlocoDog(){
-	removerWelcome();
-	if (countB %2 == 0) {
-		bloco[1].style.display = 'block';
-		blocoB.style.display = 'block';
-		bloco[1].classList.add('animarD');
-		blocoB.classList.add('animarY');
-	}else{
-		bloco[1].style.display = 'none';
-		blocoB.style.display = 'none';
-		bloco[1].classList.remove('animarD');
-		blocoB.classList.remove('animarY');
-	}
-	countB++;	
-}
-
-function mostrarProntuario(){
-	removerWelcome();
-	if (countC %2 == 0) {
-		blocoC.style.display = 'block';
-		blocoC.classList.add('animarY');
-	}else{
-		blocoC.style.display = 'none';
-		blocoC.classList.remove('animarY');
-	}
-	countC++;
 }
 
 function clicar(){
@@ -127,9 +112,30 @@ function clicar(){
 	}else{
 		this.appendChild(img);
 	}
+	if (check[0].hasChildNodes()) {
+		plano[0].value = 'Banho e Tosa, marcado para o dia: ....';
+	}else{
+		plano[0].value = '';
+	}
+	if (check[1].hasChildNodes()) {
+		plano[1].value = 'Vacina, marcado para o dia: ....';
+	}else{
+		plano[1].value = '';
+	}
+	if (check[2].hasChildNodes()) {
+		plano[2].value = 'Consulta, marcada para o dia: XX/07/2018';
+	}else{
+		plano[2].value = '';
+	}
+	if (check[3].hasChildNodes()) {
+		plano[3].value = 'Corte de Unhas, marcado para o dia: ....';
+	}else{
+		plano[3].value = '';
+	}
 }
 
 for (let div of check){
 	div.addEventListener('click', clicar);
 }
+
 
