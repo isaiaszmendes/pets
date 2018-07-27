@@ -3,67 +3,161 @@ body{
 	display: flex;
 	justify-content: center;
 	background-color: #f2f2f2;
+	font-family: 'Roboto', sans-serif;
+}
+h1 {
+	font-size: 55px;
+	font-family: 'Pacifico';
+}
+
+.cor-tema{
+	color: rgba(101,78,163,1);
+}
+.welcome{
+	position: relative;
+	text-align: center;
+	margin: 200px 0px;
+}
+.welcome p{
+	text-align: justify;
+	font-size: 20px;
+	font-family: cursive;
+}
+
+header{
+	position: relative;
+	margin-top: 0;
+	height: 70px;
+	width: 100%;
+	background-color: rgba(101,78,163,0.8);
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	z-index: 10;
+}
+header ul{
+	display: flex;
+}
+
+header li{
+	margin: -5px 150px;
+	list-style-type: none;
+	cursor: pointer;
+}
+
+.icone-casinha{
+	width: 55px;
+	height: 55px;
 }
 
 .conteudo{
+	margin-top: 50px;
 	width: 1000px;
 	height: 800px;
 }
 
-.topo{
-
+.blocoA{
 	display: flex;
-	justify-content: center;
-	animation-name: deslizarX;
+    flex-direction: column;
+    align-items: center;
+}
+
+.animarE{
+	animation-name: deslizarE;
+    animation-duration: 2s;
+}
+.animarD{
+	animation-name: deslizarD;
     animation-duration: 2s;
 }
 
-.topo .blocos{
-	margin: 10px 80px;
+.animarY{
+	animation-name: deslizarY;
+    animation-duration: 2s;
+}
+
+.deslizarSumirE{
+	animation-name: deslizarSumirE;
+    animation-duration: 2s;
+}
+
+.deslizarSumirD{
+	animation-name: deslizarSumirD;
+    animation-duration: 2s;
+}
+
+.blocoA .blocos{
+	margin: 50px 80px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.esconder{
+	visibility: hidden;
+}
+
+.remover{
+	display: none;
 }
 
 .blocos .foto{
-	border: 1px solid blue;
+	border: 4px solid rgba(101,78,163,1);
 	border-radius: 50%;
 	width: 200px;
 	height: 200px;
 	overflow: hidden;
 	margin-top: 20px;
+	-webkit-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	-moz-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
 
 }
 .info{
-	text-align: center;
+	border: 2px solid rgba(101,78,163,1);
 	font-family: sans-serif;
+    width: 400px;
+    background-color: #e3e3e3;
+    margin-top: 50px;
+    padding: 50px;
+    border-radius: 5px;
+    -webkit-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	-moz-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+}
+
+.info p{
+	text-align: justify;
 }
 p{
 	font-size: 18px;
 }
 
 div .dono{
-	width: 200px;
+	width: 250px;
 	height: 350px;
 }
 
 div .pet{
-	padding: 40px 10px;
-	width: 200px;
-	height: 170px;
+	padding: 40px 0.8px;
+    width: 227.1px;
+    height: 170px;
 	background-color: #fff;
 }
 .blocoB{
-	display: flex;
-	justify-content: flex-end;
-	animation-name: deslizarY;
-    animation-duration: 2s;
+	display: none;
+	justify-content: center;
     font-family: cursive;
+    margin: 130px 0px;
 }
 
 .servicos{
-	width: 450px;
+	width: 650px;
     background: linear-gradient(to top, rgba(33,150,243,0.2),rgba(33,150,243,0.6));
 	text-align: center;
 	border-radius: 20px 20px 0px 0px;
-	margin-right: 99px;
+	-webkit-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	-moz-box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
+	box-shadow: 11px 3px 43px -8px rgba(0,0,0,0.57);
 }
 .linhas{
 	display: flex;
@@ -72,22 +166,48 @@ div .pet{
 
 .servicos h1{
 	color: #fff;
+	font-size: 40px;
 	font-family: cursive;
+
 }
 
 .check-image{
 	width: 60px;
 	height: 65px;
-	border: 1px solid black;
+	border: 2px solid rgba(17,122,205,1);
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	outline : none;
+	border-bottom: none;
+	border-right: none;
+}
+.check-image img{
+	animation-name: animarPata;
+    animation-duration: 0.8s;	
 }
 
+.linhas:nth-child(5) .check-image {
+	border-bottom: 2px solid rgba(17,122,205,1);
+}
+
+.check-image:hover{
+	cursor: pointer;
+}
+
+
 .tipo-servico{
-	border: 1px solid black;
+	border: 2px solid rgba(17,122,205,1);
+	border-bottom: none;
 	width: 100%;
+}
+
+.linhas:nth-child(5) .tipo-servico{
+	border-bottom: 2px solid rgba(17,122,205,1);
+}
+
+.tipo-servico:hover{
+	background-color: rgba(33,150,243,0.3);
 }
 
 .pata{
@@ -98,8 +218,6 @@ div .pet{
 
 .blocoC{
 	display: flex;
-	animation-name: deslizarY;
-    animation-duration: 2s;
     margin-top: 50px;
     justify-content: center;
 }
@@ -141,7 +259,6 @@ div .pet{
 	font-size: 22px;
 	font-family: cursive;
 	margin: 0px 20px;
-	
 	margin-bottom: 15vh;
 	outline: none;
 }
@@ -165,9 +282,19 @@ div .pet{
 	color: #f2f2f2;
 }
 
-@keyframes deslizarX {
+@keyframes deslizarD {
     0% {
     	transform: translateX(200px);
+    }
+    100%
+    {
+    	transform: translateX(0px);
+    }
+}
+
+@keyframes deslizarE {
+    0% {
+    	transform: translateX(-200px);
     }
     100%
     {
@@ -182,5 +309,43 @@ div .pet{
     100%
     {
     	transform: translateY(0px);
+    }
+}
+
+@keyframes animarPata {
+    0% {
+    	width: 30px;
+		height: 35px;
+    }
+    800%{
+		width: 50px;
+		height: 55px;
+    }
+    100%
+    {
+    	width: 40px;
+		height: 45px;
+    }
+}
+
+@keyframes deslizarSumirE {
+    0% {
+
+    	transform: translateX(0px);
+    }
+    100%
+    {  	
+    	transform: translateX(-200px);
+    }
+}
+
+@keyframes deslizarSumirD{
+    0% {
+
+    	transform: translateX(0px);
+    }
+    100%
+    {  	
+    	transform: translateX(200px);
     }
 }
