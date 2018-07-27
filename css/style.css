@@ -14,12 +14,12 @@ section {
 	transition: .8s;
 }
 
-section form {
+section .form {
 	display: flex;
 	flex-direction: column;
 }
 
-section div {
+section .logo {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 55px;
@@ -28,18 +28,18 @@ section div {
 	overflow:hidden;
 }
 
-section div img{
+section .logo img{
 	width: 200px;
 	height: 200px;
 	transition: .6s;
 }
 
-section div img:hover{
+section .logo img:hover{
 	transform: scale(1.09);
 }
 
 
-section form input{
+section .form input{
 	width: 450px;
 	height: 20px;
 	margin: 10px 0px 10px;
@@ -55,15 +55,15 @@ section form input{
 	border-bottom: 2px solid #CACACA;
 }
 
-section form input:focus{
+section .form input:focus{
 	border-bottom: 2px solid rgba(101,78,163,1);;
 }
 
-section form input:nth-child(2){
+section .form input:nth-child(2){
 	margin-bottom: 30px;
 }
 
-section form button{
+section .form button{
 	height: 40px;
 	border-radius: 5px;	
 	outline: none;
@@ -76,7 +76,7 @@ section form button{
 	transition: .3s;
 }
 
-section form button:hover{
+section .form button:hover{
 	background-color: rgba(101,78,163,1);;
 	color: #f2f2f2;
 	transition: .6s;
@@ -90,17 +90,17 @@ section form button:hover{
 		margin-top: 20px;
 	}
 
-	section div {
+	section .logo {
 		margin-bottom: 15px;
 	}	
 
-	section div img{
+	section .logo img{
 		width: 170px;
 		height: 170px;
 
 	}
 
-	section form input{
+	section .form input{
 		width: 400px;
 		font-size: 15px;
 	}
@@ -113,16 +113,16 @@ section form button:hover{
 		
 	}
 
-	section div {
+	section .logo {
 		margin-bottom: 25px;
 	}
 
-	section div img{
+	section .logo img{
 		width: 140px;
 		height: 140px;
 	}
 
-	section form input{
+	section .form input{
 		width: 270px;
 		margin: 10px 0px 0px;
 		font-size: 15px;
@@ -130,11 +130,11 @@ section form button:hover{
 		border-bottom: 1.5px solid #CACACA;
 	}
 
-	section form input:nth-child(2){
+	section .form input:nth-child(2){
 		margin-bottom: 40px;
 	}
 
-	section form button {
+	section .form button {
     	height: 35px;
 	}
 }
